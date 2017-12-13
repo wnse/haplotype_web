@@ -1,0 +1,15 @@
+
+
+
+<form action='' method='post'>
+	{% csrf_token %}
+	<h1>Haplotype Phasing</h1>
+	<li>this is a web tools for pedigree haplotype compute</li>
+	<br></br>
+	<textarea name="input" style="width:60%;height:500px;";></textarea>
+	<br></br>
+	<input type='submit' value='Submit'>
+	<a href ="example.html">Example</a>
+
+</form>
+	<p>{{output}}</p>
