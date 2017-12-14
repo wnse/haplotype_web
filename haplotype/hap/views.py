@@ -7,7 +7,7 @@ def index(request):
 	get = {}
 	if request.POST:
 		get['output'] = request.POST['input'] 
-		final_out = bio_split.split_a_string(get['output'])
+		final_out = bio_split.phasing(get['output'])
 	return render(request, 'index.html', {'output':final_out})
 	
 def example(request):
