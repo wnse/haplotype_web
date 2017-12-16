@@ -2,7 +2,7 @@
 import os, tempfile
 import subprocess
 
-def phasing(stringA):
+def jabrehoo(stringA):
 	path = os.path.dirname(__file__)
 	with tempfile.NamedTemporaryFile(mode='w+t') as f:
 		f.write(stringA)
@@ -12,3 +12,6 @@ def phasing(stringA):
 		return output.read()
 
 
+def method2(stringA):
+	output = "method 2 is still in development"
+	return output

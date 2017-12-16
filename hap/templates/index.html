@@ -4,14 +4,18 @@
 <form action='' method='post'>
 	{% csrf_token %}
 	<h1>Haplotype Phasing</h1>
-	<li>this is a web tools for pedigree haplotype compute</li>
+	<li>this is a web tools for pedigree haplotype phasing</li>
 	<br></br>
-	<textarea name="input" style="width:60%;height:500px;";></textarea>
+	<textarea name="input" style="width:60%;height:50%;";></textarea>
 	<br></br>
+	<select name="phase_method">
+		<option value="method1">Method 1</option>
+		<option value="method2">Method 2</option>
+	</select>
 	<input type='submit' value='Submit'>
 </form>
-	<br><a href ="example" target="_blank">Example</a></br>
-
+	<a href ="example" target="_blank">Example input</a>
+	<br>{{method}}</br>
 	<data><pre>{{output}}</pre></data>
 </body>
 
