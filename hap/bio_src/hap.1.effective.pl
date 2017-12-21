@@ -68,7 +68,7 @@ for my $i (0..scalar(@genotype)-1){
 	
 	print $heter $i."\t".$maternal."\t".$paternal."\t";
 	print $heter $genotype[$i][2];
-	for my $j (3..$genotype_cell_num-2){   
+	for my $j (3..$genotype_cell_num-1){   
 		print $heter "\t".$genotype[$i][$j];	
 	}
 	print $heter "\n";

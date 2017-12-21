@@ -658,7 +658,7 @@ while(<FH4>){
 next if $_ =~ /^\s*$/;
 my @temp = split(/\s+/,$_);
 if ($genotype_count == 0){
-$genotype_cell_num = scalar(@temp)-2;
+$genotype_cell_num = scalar(@temp)-1;
 for my $i (1..$genotype_cell_num){
 	chomp($temp[$i]) if $i == $genotype_cell_num;
 	@genotype_name = (@genotype_name, $temp[$i]);
