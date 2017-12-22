@@ -23,7 +23,7 @@ my %eff_cov_m;
 my @eff_id_m;
 my @hmm_p;
 my @hmm_m;
-print "\tP0P1M0M1\t";
+printf "\t%8s\t","M0M1P0P1";
 for (my $i=0;$i<scalar(@{$embryo}) ;$i++) {
 	print "$$sam_id[$i+3]\t";
 #	print "@{$$embryo[$i]}\n";
@@ -57,22 +57,25 @@ for (my $i=0;$i<scalar(@{$embryo}) ;$i++) {
 }
 print "\n";
 for (my $id=0;$id<scalar(@{$snp_id}) ;$id++) {
-	print "$id\t";
-	print "$$p0[$id]$$p1[$id]$$m0[$id]$$m1[$id]\t";
+	printf "%2s\t", "$id";
+	printf "%8s\t","$$p0[$id] $$p1[$id] $$m0[$id] $$m1[$id]";
 	for (my $i=0;$i<scalar(@{$embryo}) ;$i++) {
-		print "${$$embryo[$i]}[$id] ";
+#		print "${$$embryo[$i]}[$id] ";
 		if (exists $eff_cov_p{$i}{$id}) {
 			my $j=$eff_cov_p{$i}{$id};
-			print "${$obs_p[$i]}[$j]${$hmm_p[$i]}[$j]\t";
+		#	print "${$obs_p[$i]}[$j]${$hmm_p[$i]}[$j]\t";
+			print "M"."${$hmm_p[$i]}[$j]"
 		}else{
-			print "   ";
+			print "  ";
 		}
 		if (exists $eff_cov_m{$i}{$id}) {
 			my $j=$eff_cov_m{$i}{$id};
-			print "${$obs_m[$i]}[$j]${$hmm_m[$i]}[$j]\t";
+		#	print "${$obs_m[$i]}[$j]${$hmm_m[$i]}[$j]\t";
+			print "P"."${$hmm_m[$i]}[$j]"
 		}else{
-			print "  \t";
+			print "  ";
 		}
+		print "\t";
 	}
 	print "\n";
 }
