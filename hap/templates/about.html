@@ -48,19 +48,25 @@
           <ul class="nav navbar-nav">
             <li><a href="home">Home</a></li>
             <li class="active"><a href="about">About</a></li>
-            <li><a href="phase">Phasing</a></li>
+            <li><a href="phase">go-Phasing</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-
       <div class="starter-template">
-        <h1>Haplotype Phasing Web Tool</h1>
-        <p class="lead">This is ABOUT This is ABOUT This is ABOUT This is ABOUT This is ABOUT This is ABOUT <br> This is ABOUT This is ABOUT This is ABOUT This is ABOUT </p>
       </div>
-
+        <h1>Haplotype Phasing Web Tool</h1>
+        <p class="lead">There are three steps in the algorithm. First, algorithm reconstruct the haplotype where parental genotypes are one homozygous and one heterozygous. Next algorithm infer the haplotype where both parental genotypes are heterozygous using information obtain from first step. Finally, sites from previous two steps are combined to deduce the ADO site and where the recombination may happen. 
+		</p>
+	<img src="/static/flow.png"/ width=500 height=500>
+	<br></br>
+		<p class="lead">Haplotype Phasinig Web Tool performs pedigree analyses between two generations. Input describe genotypes of each individuals in your dataset. The first two column are respectively maternal and paternal genotypes, which should not be missed. The third column and after that are genotypes of the offspring. The formate s of the input and output are described by the figure below.
+		</p>
+	<img src="/static/input.png"/ width=500 height=500>
+	<img src="/static/output.png"/ width=500 height=500>
+	<br></br>
     </div><!-- /.container -->
 
 

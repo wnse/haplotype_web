@@ -47,7 +47,7 @@
           <ul class="nav navbar-nav">
             <li><a href="home">Home</a></li>
             <li><a href="about">About</a></li>
-            <li class="active"><a href="phase">Phasing</a></li>
+            <li class="active"><a href="phase">go-Phasing</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -65,7 +65,7 @@
 		{% csrf_token %}
 		<h1></h1>
 		<p></p>
-		<textarea autocomplete="off" name="input" rows="30%" cols="150%";>paste genotype here</textarea>
+		<textarea autocomplete="off" name="input" rows="30%" cols="150%" placeholder="paste genotype here"></textarea>
 		<br></br>
 		<!--select name="phase_method">
 			<option value="method1">Method 1</option>
@@ -74,11 +74,15 @@
 		<input type='submit' value='Submit'>
 		<p><a href ="example" target="_parent">Example input</a></p>
 	</form>
-		<br>{{method}}</br>
-		<data><pre>{{output}}</pre></data>
-	
+		<pre>
+		{{output|safe}}
+		</pre>
 
     </div><!-- /.container -->
+
+
+
+
 
 
     <!-- Bootstrap core JavaScript
@@ -93,36 +97,5 @@
 </html>
 
 
-
-
-
-
-
-
-
-
-
-<!-- 
-
-<body>
-<a href ="example" target="_parent">Example input</a>
-<form action='' method='post'>
-	{% csrf_token %}
-	<h1>Haplotype Phasing</h1>
-	<li>this is a web tools for pedigree haplotype phasing</li>
-	<br></br>
-	<textarea name="input" style="width:60%;height:50%;";></textarea>
-	<br></br>
-	<select name="phase_method">
-		<option value="method1">Method 1</option>
-		<option value="method2">Method 2</option>
-	</select>
-	<input type='submit' value='Submit'>
-</form>
-	<br>{{method}}</br>
-	<data><pre>{{output}}</pre></data>
-</body>
-
--->
 
 

@@ -6,7 +6,8 @@ if test -s $input; then
 	perl $bin/hap.1.effective.pl $input
 	perl $bin/hap.2.process.eff.pl $input.meffective
 	perl $bin/hap.2.process.eff.pl $input.peffective
-	perl $bin/hap.3.mix.haplo.pl $input
+	perl $bin/hap.3.mix.haplo.pl $input >$input.hap.out
+	perl $bin/mkSVG.pl $input.hap.out
 	rm $input.*
 else
 	echo "NULL"
